@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 물류 산업 전망: 글로벌 및 국내 시장 분석</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .kpi-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #005f73;
+        }
+        .kpi-label {
+            font-size: 1.25rem;
+            color: #0a9396;
+            margin-top: 0.5rem;
+        }
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            height: 100%;
+        }
+        .swot-quadrant {
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .swot-quadrant h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid;
+            padding-bottom: 0.25rem;
+        }
+        .swot-quadrant ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-center text-[#005f73]">2025년 물류 산업 전망</h1>
+            <p class="text-center text-lg text-gray-600 mt-1">글로벌 및 국내 시장 핵심 분석</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="global-market" class="mb-16">
+            <h2 class="text-4xl font-extrabold text-center mb-2 text-[#005f73]">글로벌 물류 시장 전망</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">2025년 글로벌 물류 시장은 지정학적 불확실성과 기술 혁신이 공존하는 가운데 완만한 성장이 예상됩니다. 이커머스의 지속적인 확장과 신흥 시장의 부상이 성장을 견인하는 주요 동력입니다.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="kpi-card">
+                    <div class="kpi-value">$14.5조</div>
+                    <div class="kpi-label">2025년 글로벌 시장 규모 (예상)</div>
+                    <p class="text-gray-500 mt-4 text-sm">연평균 4.5% 성장률을 기반으로 한 추정치. 디지털 전환과 지속가능성 요구가 새로운 기회를 창출하고 있습니다.</p>
+                </div>
+                 <div class="kpi-card">
+                    <div class="kpi-value">5.5%</div>
+                    <div class="kpi-label">이커머스 물류 성장률 (연평균)</div>
+                    <p class="text-gray-500 mt-4 text-sm">소비자 직거래(D2C) 모델 확산과 빠른 배송 수요 증가가 성장을 주도하고 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-4 md:p-8">
+                <h3 class="text-2xl font-bold text-center mb-4">글로벌 Top 5 물류 기업 매출 비교 (2024년 기준)</h3>
+                <p class="text-center text-gray-500 mb-6">글로벌 물류 시장은 소수의 거대 기업들이 높은 점유율을 차지하며 시장을 주도하고 있습니다. 아래는 최근 실적 기준 상위 5개 기업의 매출 비교입니다.</p>
+                <div class="chart-container">
+                    <canvas id="globalMarketShareChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section id="korea-market" class="mb-16">
+            <h2 class="text-4xl font-extrabold text-center mb-2 text-[#005f73]">국내 물류 시장 전망</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">국내 물류 시장은 C-커머스(중국계 이커머스)의 공습과 국내 이커머스 시장 재편, 그리고 자동화 기술 도입 경쟁 심화가 2025년의 핵심 변수가 될 것입니다.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="kpi-card">
+                    <div class="kpi-value">230조원</div>
+                    <div class="kpi-label">2025년 국내 시장 규모 (예상)</div>
+                     <p class="text-gray-500 mt-4 text-sm">치열한 단가 경쟁 속에서도 풀필먼트 서비스와 콜드체인 물류 등 고부가가치 시장은 지속 성장할 전망입니다.</p>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">8.6%</div>
+                    <div class="kpi-label">국내 이커머스 물류 성장률 (연평균)</div>
+                    <p class="text-gray-500 mt-4 text-sm">새벽배송, 당일배송 등 배송 속도 경쟁이 심화되며 풀필먼트 센터 투자가 가속화되고 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-4 md:p-8">
+                <h3 class="text-2xl font-bold text-center mb-4">국내 Top 5 물류 기업 매출 비교 (2024년 기준)</h3>
+                 <p class="text-center text-gray-500 mb-6">국내는 대기업 계열 물류사들이 안정적인 그룹 물량을 바탕으로 시장을 선도하고 있으며, 택배 및 이커머스 시장의 강자들이 그 뒤를 잇고 있습니다.</p>
+                <div class="chart-container">
+                    <canvas id="koreaMarketShareChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="swot-analysis" class="mb-16">
+            <h2 class="text-4xl font-extrabold text-center mb-8 text-[#005f73]">주요 기업 SWOT 분석 및 미래 전략</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div class="kpi-card p-0 overflow-hidden">
+                    <div class="p-6 bg-[#005f73] text-white">
+                        <h3 class="text-2xl font-bold">DHL Group (글로벌)</h3>
+                        <p>독보적인 글로벌 네트워크와 브랜드 파워</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="swot-grid">
+                            <div class="swot-quadrant bg-green-100 text-green-800">
+                                <h4 class="text-green-600 border-green-600">Strength (강점)</h4>
+                                <ul class="list-disc"><li>세계 최대 규모의 항공/육상 운송 네트워크</li><li>높은 브랜드 인지도 및 신뢰도</li><li>다양한 산업군에 특화된 솔루션</li></ul>
+                            </div>
+                            <div class="swot-quadrant bg-red-100 text-red-800">
+                                <h4 class="text-red-600 border-red-600">Weakness (약점)</h4>
+                                <ul class="list-disc"><li>상대적으로 높은 가격 정책</li><li>거대한 조직으로 인한 더딘 의사결정</li><li>지역별 서비스 품질 편차</li></ul>
+                            </div>
+                            <div class="swot-quadrant bg-blue-100 text-blue-800">
+                                <h4 class="text-blue-600 border-blue-600">Opportunity (기회)</h4>
+                                <ul class="list-disc"><li>이커머스, 헬스케어 물류 성장</li><li>지속가능성(Green Logistics) 수요 증가</li><li>디지털 기술 기반 서비스 확장</li></ul>
+                            </div>
+                            <div class="swot-quadrant bg-yellow-100 text-yellow-800">
+                                <h4 class="text-yellow-600 border-yellow-600">Threat (위협)</h4>
+                                <ul class="list-disc"><li>글로벌 무역 갈등 및 보호무역주의</li><li>각국의 디지털 서비스세 도입</li><li>IT 기술 기반 신생 경쟁사 출현</li></ul>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="text-xl font-bold text-[#005f73]">미래 발전 방향</h4>
+                            <p class="text-gray-600 mt-2">지속가능성에 초점을 맞춘 'GoGreen' 전략을 가속화하고, AI 및 빅데이터를 활용한 물류 예측 및 자동화 시스템 고도화에 집중할 것입니다. 또한, 아시아 및 아프리카 신흥 시장 내 헬스케어 및 이커머스 물류 인프라 투자를 확대하여 새로운 성장 동력을 확보할 계획입니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card p-0 overflow-hidden">
+                     <div class="p-6 bg-[#005f73] text-white">
+                        <h3 class="text-2xl font-bold">CJ 대한통운 (국내)</h3>
+                        <p>국내 1위 택배 및 계약물류 사업자</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="swot-grid">
+                           <div class="swot-quadrant bg-green-100 text-green-800">
+                                <h4 class="text-green-600 border-green-600">Strength (강점)</h4>
+                                <ul class="list-disc"><li>압도적인 국내 택배 시장 점유율</li><li>전국적인 물류센터 및 허브 터미널</li><li>TES(기술,엔지니어링,시스템) 역량</li></ul>
+                            </div>
+                            <div class="swot-quadrant bg-red-100 text-red-800">
+                                <h4 class="text-red-600 border-red-600">Weakness (약점)</h4>
+                                <ul class="list-disc"><li>높은 택배 사업 의존도</li><li>치열한 단가 경쟁으로 인한 수익성 압박</li><li>노사 관계의 잠재적 불안정성</li></ul>
+                            </div>
+                            <div class="swot-quadrant bg-blue-100 text-blue-800">
+                                <h4 class="text-blue-600 border-blue-600">Opportunity (기회)</h4>
+                                <ul class="list-disc"><li>C-커머스 물량 유치 확대</li><li>풀필먼트 서비스(NAVER 등) 확장</li><li>2차전지, 제약 등 신성장 산업 물류</li></ul>
+                            </div>
+                            <div class="swot-quadrant bg-yellow-100 text-yellow-800">
+                                <h4 class="text-yellow-600 border-yellow-600">Threat (위협)</h4>
+                                <ul class="list-disc"><li>쿠팡 등 자체 물류망을 가진 화주 부상</li><li>C-커머스 업체의 자체 물류망 구축 가능성</li><li>최저임금 인상 등 비용 증가 요인</li></ul>
+                            </d
